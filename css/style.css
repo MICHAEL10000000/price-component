@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+   /*  ### Primary */
+
+--Linear-Gradient1: hsl(236, 72%, 79%) ;
+--Linear-Gradient2: hsl(237, 63%, 64%);
+
+    /* ### Neutral */
+
+--Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+--Light-Grayish-Blue: hsl(234, 14%, 74%);
+--Grayish-Blue: hsl(233, 13%, 49%);
+--Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+@font-face {
+    font-family: Montserat;
+    src: url(../font/Monteserat/Montserrat-VariableFont_wght.ttf);
+}
+body{
+    background: url(../images/bg-top.svg)  top right , 
+    #F5F3FF
+   ;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: Montserat;
+    background-position-x: 11rem;
+    background-position-y: -4%;
+
+}
+@media screen and (min-width:768px) {
+    body{
+        background-position-x: 144%;
+    }
+    
+}
+@media screen and (min-width:1024px) {
+    body{
+        background: url(../images/bg-top.svg)  top right , 
+        url(../images/bg-bottom.svg) bottom left,
+        #F5F3FF
+       ;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        font-family: Montserat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size:auto 65%, auto 35%, auto, auto;
+       
+    
+    }
+    .plans{
+        flex-grow: 1;
+    }
+    .special {
+        flex-grow: 2;
+    }
+}
+.gradient {
+    background: linear-gradient( to right,  var(--Linear-Gradient1), var(--Linear-Gradient1) 1%, var(--Linear-Gradient2) ) ;
+}
+.gradient:hover{
+    background: white;
+    border: 1px var(--Linear-Gradient2) solid;
+}
+.pro-gradient {
+    background: linear-gradient( to bottom right,  var(--Linear-Gradient1) 0, var(--Linear-Gradient1) 0.1%, var(--Linear-Gradient2) ) ;
+}
+
+.buttonStart {
+    padding: 0.25rem 2.5rem 0.25rem 0.25rem;
+}
+.buttonEnd {
+    padding: 0.25rem 0.25rem 0.25rem 2.5rem;
+}
